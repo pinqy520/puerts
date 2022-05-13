@@ -173,6 +173,8 @@ elseif ( ANDROID )
         target_compile_definitions (puerts PRIVATE PLATFORM_ANDROID_ARM64)
     endif ()
 
+    target_compile_definitions (puerts PRIVATE WITH_INSPECTOR)
+
     #set_target_properties( puerts PROPERTIES LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/android_version.script)
     #set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections -Wl,--version-script=${CMAKE_CURRENT_SOURCE_DIR}/android_version.script")
     #set (CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections")
